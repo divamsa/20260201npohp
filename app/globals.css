@@ -1,33 +1,40 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* Colors */
+  --c-navy-900: #0F172A; /* Primary Text & Heading */
+  --c-navy-800: #1E293B;
+  --c-brand-gold: #D97706; /* Accent Warmth */
+  --c-brand-light: #FDE68A;
+  --c-bg-primary: #F8FAFC; /* Slate 50 */
+  --c-bg-white: #FFFFFF;
+  --c-text-body: #334155;
+  
+  /* Fonts */
+  --font-base: var(--font-gothic), "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  --font-heading: var(--font-mincho), "Yu Mincho", YuMincho, "Hiragino Mincho ProN", serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Spacing */
+  --container-width: 1200px;
+  --container-padding: 1rem;
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--c-text-body);
+  background: var(--c-bg-primary);
+  font-family: var(--font-base);
+  margin: 0;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--c-navy-900);
+  line-height: 1.4;
+  margin-top: 0;
 }
 
 a {
@@ -35,8 +42,13 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+* {
+  box-sizing: border-box;
+}
+
+/* Utilities */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
 }

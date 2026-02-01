@@ -1,0 +1,35 @@
+.section {
+    padding: 8rem 0;
+    /* More padding for spacious feeling */
+    background-color: #FFFBF0;
+    /* Warm Floral White */
+    text-align: center;
+}
+
+.heading {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: var(--c-navy-900);
+}
+
+.lead {
+    font-size: 1.25rem;
+    line-height: 2;
+    margin-bottom: 2rem;
+    color: var(--c-navy-800);
+    font-feature-settings: "palt";
+}
+
+.text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--c-text-body);
+}
+
+.strong {
+    color: var(--c-brand-gold);
+    font-weight: 700;
+}
